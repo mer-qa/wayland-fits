@@ -1,0 +1,3 @@
+[submodule "wfits"]
+	path = wfits
+	url = https://github.com/01org/wayland-fits.git
