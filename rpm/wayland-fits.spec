@@ -3,7 +3,6 @@ Version:        0.0.1
 Release:        1
 Summary:        Wayland Functional Integration Test Suite
 Source0:        %{name}-%{version}.tar.gz
-Patch0:         0001-Use-libhybris-version-check-for-wayland-egl.patch 
 Group:          Development/Tools
 License:        BSD
 URL:            http://github.com/01org/wayland-fits
