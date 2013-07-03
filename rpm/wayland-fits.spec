@@ -13,7 +13,7 @@ BuildRequires:  automake
 BuildRequires:  make
 BuildRequires:  check-devel >= 0.9.8
 BuildRequires:  wayland-devel >= 1.0.6
-BuildRequires:  mesa-llvmpipe-libEGL-devel
+BuildRequires:  mesa-llvmpipe-libwayland-egl-devel
 BuildRequires:  boost-devel >= 1.48.0
 
 Requires:       boost-program-options >= 1.48.0
