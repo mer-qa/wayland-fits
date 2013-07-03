@@ -36,13 +36,14 @@ and server states.
 %setup -q
 
 %build
-cd wfits; ./autogen.sh
-make -C wfits
+cd wfits
+./autogen.sh --prefix=/usr
+make
 
 %install
 make -C wfits DESTDIR=$RPM_BUILD_ROOT install
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING README
-/usr/local/bin/wfits
+%doc wfits/COPYING wfits/README
+/usr/bin/wfits
