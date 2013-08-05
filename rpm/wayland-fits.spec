@@ -3,6 +3,7 @@ Version:        0.0.1
 Release:        1
 Summary:        Wayland Functional Integration Test Suite
 Source0:        %{name}-%{version}.tar.gz
+Source1:        tests.xml
 Group:          Development/Tools
 License:        BSD
 URL:            http://github.com/01org/wayland-fits
@@ -31,6 +32,15 @@ the server-side or from an emulated system-level device (depends on the type
 of backend used).  There are also tests with emphasis on cross-validating client
 and server states.
 
+%package tests
+Summary:        Wayland-fits test xml
+Group:          Development/System
+BuildArch:      noarch
+Requires:       %{name} = %{version}-%{release}
+
+%description tests
+Test cases and xml test description for Wayland-fits
+
 %prep
 %setup -q
 
@@ -41,8 +51,14 @@ make
 
 %install
 make -C wfits DESTDIR=$RPM_BUILD_ROOT install
+install -d -m 755 %{buildroot}/opt/tests/%{name}
+install -m 644 %{SOURCE1} %{buildroot}/opt/tests/%{name}/
 
 %files
 %defattr(-,root,root,-)
 %doc wfits/COPYING wfits/README
 /usr/bin/wfits
+
+%files tests
+%defattr(-,root,root,-)
+/opt/tests/%{name}/*

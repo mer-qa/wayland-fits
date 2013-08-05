@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tests.xml - Test case descriptions for automation tools.
+
+   Copyright (C) 2013 Jolla Ltd.
+   Contact: Matti Kosola <matti.kosola@jollamobile.com>
+
+-->
+<testdefinition version="1.0">
+  <suite name="wayland-fits-tests" domain="Graphics">
+
+    <set name="core-bind_interface" feature="Wayland">
+      <case name="wfits_input"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wfits_input</step>
+      </case>
+      <case name="wfits_query"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wfits_query</step>
+      </case>
+      <case name="wl_compositor"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wl_compositor</step>
+      </case>
+      <case name="wl_data_device_manager"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wl_data_device_manager</step>
+      </case>
+      <case name="wl_display"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wl_display</step>
+      </case>
+      <case name="wl_output"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wl_output</step>
+      </case>
+      <case name="wl_seat"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wl_seat</step>
+      </case>
+      <case name="wl_shell"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wl_shell</step>
+      </case>
+      <case name="wl_shm"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/bind_interface/wl_shm</step>
+      </case>
+    </set>
+
+    <set name="core-cursor" feature="Wayland">
+      <case name="ThemeLoadTest"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/cursor/ThemeLoadTest</step>
+      </case>
+    </set>
+
+    <set name="core-data" feature="Wayland">
+      <case name="data_wl_compositor"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/data/data_wl_compositor</step>
+      </case>
+      <case name="data_wl_data_device_manager"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/data/data_wl_data_device_manager</step>
+      </case>
+      <case name="data_wl_display"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/data/data_wl_display</step>
+      </case>
+      <case name="data_wl_output"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/data/data_wl_output</step>
+      </case>
+      <case name="data_wl_seat"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/data/data_wl_seat</step>
+      </case>
+      <case name="data_wl_shell"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/data/data_wl_shell</step>
+      </case>
+      <case name="data_wl_shm"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/data/data_wl_shm</step>
+      </case>
+    </set>
+
+    <set name="core-harness" feature="Wayland">
+      <case name="GlobalPointerTest"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/harness/GlobalPointerTest</step>
+      </case>
+      <case name="SimpleTest"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/harness/SimpleTest</step>
+      </case>
+    </set>
+
+    <set name="core-input" feature="Wayland">
+      <case name="SimpleDragAndDropTest"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/input/SimpleDragAndDropTest</step>
+      </case>
+      <case name="SurfacePointerTest"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/input/SurfacePointerTest</step>
+      </case>
+    </set>
+
+    <set name="core-wrapper" feature="Wayland">
+      <case name="Compositor"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/Compositor</step>
+      </case>
+      <case name="DataDeviceConstruct"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/DataDeviceConstruct</step>
+      </case>
+      <case name="DataDeviceManagerConstruct"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/DataDeviceManagerConstruct</step>
+      </case>
+      <case name="DataSourceConstruct"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/DataSourceConstruct</step>
+      </case>
+      <case name="Display"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/Display</step>
+      </case>
+      <case name="Pointer"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/Pointer</step>
+      </case>
+      <case name="Seat"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/Seat</step>
+      </case>
+      <case name="SharedMemory"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/SharedMemory</step>
+      </case>
+      <case name="SharedMemoryBuffer"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/SharedMemoryBuffer</step>
+      </case>
+      <case name="Shell"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/Shell</step>
+      </case>
+      <case name="ShellSurface"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/ShellSurface</step>
+      </case>
+      <case name="Surface"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter core/wrapper/Surface</step>
+      </case>
+    </set>
+
+    <set name="tools-sanity" feature="Wayland">
+      <case name="FullnameTest"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter tools/sanity/FullnameTest</step>
+      </case>
+      <case name="MacroTest"
+        type="Functional positive">
+        <step>/usr/bin/wfits --filter tools/sanity/MacroTest</step>
+      </case>
+    </set>
+
+  </suite>
+</testdefinition>
