@@ -1,0 +1,28 @@
+From a541b24db6f43985e9fab598d915b41441de06b0 Mon Sep 17 00:00:00 2001
+From: Matti Kosola <matti.kosola@jolla.com>
+Date: Wed, 11 Feb 2015 14:45:01 +0200
+Subject: [PATCH] Require wayland version 1.1.0
+
+Signed-off-by: Matti Kosola <matti.kosola@jolla.com>
+---
+ configure.ac | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index fd9a91f..40bed32 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -23,8 +23,8 @@ LDFLAGS="-Wl,--no-as-needed $LDFLAGS"
+ 
+ # Required minimum versions for dependencies
+ m4_define([check_req_version],		[0.9.8])
+-m4_define([wayland_req_version],	[1.3.0])
+-m4_define([weston_req_version],		[1.3.0])
++m4_define([wayland_req_version],	[1.1.0])
++m4_define([weston_req_version],		[1.1.0])
+ m4_define([efl_req_version],		[1.7.6])
+ m4_define([gtk_req_version],		[3.8.0])
+ m4_define([boost_req_version],		[1.49.0])
+-- 
+1.9.1
+

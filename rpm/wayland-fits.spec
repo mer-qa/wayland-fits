@@ -15,6 +15,7 @@ BuildRequires:  check-devel >= 0.9.8
 BuildRequires:  wayland-devel >= 1.0.6
 BuildRequires:  mesa-llvmpipe-libwayland-egl-devel
 BuildRequires:  boost-devel >= 1.48.0
+BuildRequires:  libxkbcommon-devel
 
 Requires:       boost-program-options >= 1.48.0
 Requires:       boost-regex >= 1.48.0
@@ -22,6 +23,8 @@ Requires:       boost-filesystem >= 1.48.0
 Requires:       boost-system >= 1.48.0
 Requires:       check >= 0.9.8
 Requires:       wayland >= 1.0.6
+
+Patch0:         0001-Require-wayland-version-1.1.0.patch
 
 %description
 Wayland-fits is a fully automated functional integration test suite.  It's
@@ -43,6 +46,7 @@ Test cases and xml test description for Wayland-fits
 
 %prep
 %setup -q
+%patch0 -p1 -d wfits
 
 %build
 cd wfits
