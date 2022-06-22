@@ -4,7 +4,6 @@ Release:        1
 Summary:        Wayland Functional Integration Test Suite
 Source0:        %{name}-%{version}.tar.gz
 Source1:        tests.xml
-Group:          Development/Tools
 License:        BSD
 URL:            https://github.com/mer-qa/wayland-fits
 
@@ -37,7 +36,6 @@ and server states.
 
 %package tests
 Summary:        Wayland-fits test xml
-Group:          Development/System
 BuildArch:      noarch
 Requires:       %{name} = %{version}-%{release}
 
