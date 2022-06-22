@@ -6,7 +6,7 @@ Source0:        %{name}-%{version}.tar.gz
 Source1:        tests.xml
 Group:          Development/Tools
 License:        BSD
-URL:            http://github.com/01org/wayland-fits
+URL:            https://github.com/mer-qa/wayland-fits
 
 BuildRequires:  autoconf
 BuildRequires:  automake
