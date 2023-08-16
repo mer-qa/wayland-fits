@@ -43,23 +43,22 @@ Requires:       %{name} = %{version}-%{release}
 Test cases and xml test description for Wayland-fits
 
 %prep
-%setup -q
-%patch0 -p1 -d wfits
+%autosetup -p1 -n %{name}-%{version}/wfits
 
 %build
-cd wfits
 ./autogen.sh --prefix=/usr
-make
+%make_build
 
 %install
-make -C wfits DESTDIR=$RPM_BUILD_ROOT install
+%make_install
 install -d -m 755 %{buildroot}/opt/tests/%{name}
 install -m 644 %{SOURCE1} %{buildroot}/opt/tests/%{name}/
 
 %files
 %defattr(-,root,root,-)
-%doc wfits/COPYING wfits/README
-/usr/bin/wfits
+%license COPYING
+%doc README
+%{_bindir}/wfits
 
 %files tests
 %defattr(-,root,root,-)
